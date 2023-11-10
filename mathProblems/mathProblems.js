@@ -31,6 +31,8 @@ function division(a, b) {
 function multiplication(a, b) {
   if (typeof a === "string" || b === "string") {
     throw new Error("You must use numbers only");
+  } else {
+    return a * b;
   }
 }
 

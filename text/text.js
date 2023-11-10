@@ -1,10 +1,13 @@
 function acceptText(text) {
   if (text.length == 0) {
     throw new Error("You must write text");
-  } else if (typeof text === "number") {
+  } else if (typeof text !== "string") {
     throw new Error("Type must be string");
   } else {
-    return text.split(" ").reverse().join(" ");
+    let characters = text.split("");
+    let reversedCharacters = characters.reverse();
+    let reversedSentence = reversedCharacters.join("");
+    return reversedSentence;
   }
 }
 
